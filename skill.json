@@ -1,0 +1,64 @@
+{
+  "name": "genpark-personal-agent-cardiac-output-stroke-volume-impedance-skill",
+  "version": "1.0.0",
+  "title": "Cardiac Output & Stroke Volume Impedance Hemodynamics Skill",
+  "description": "Thoracic bioimpedance stroke volume (SV), cardiac output (CO L/min), total peripheral resistance (TPR), and vascular compliance index. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "personal-agent",
+  "topics": [
+    "cardiac-output",
+    "stroke-volume",
+    "hemodynamics",
+    "cardiovascular",
+    "personal-agent",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "compute_hemodynamic_cardiac_metrics",
+      "description": "Calculate Stroke Volume (mL), Cardiac Output (L/min), and Total Peripheral Resistance (TPR) from MAP and HR.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "heart_rate_bpm": {
+            "type": "number"
+          },
+          "systolic_bp": {
+            "type": "number"
+          },
+          "diastolic_bp": {
+            "type": "number"
+          },
+          "body_surface_area_m2": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "heart_rate_bpm",
+          "systolic_bp",
+          "diastolic_bp"
+        ]
+      }
+    },
+    {
+      "name": "synthesize_arterial_stiffness_remedy",
+      "description": "Formulate nitric oxide precursor and vascular endothelial elasticity optimization protocol.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tpr_dynes": {
+            "type": "number"
+          },
+          "cardiac_index": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "tpr_dynes"
+        ]
+      }
+    }
+  ]
+}
